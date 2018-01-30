@@ -1,0 +1,71 @@
+package w4d2StudyHall;
+
+import java.util.Scanner;
+
+public class W4D2StudyHallExercise {
+	/******
+	 * <p> Title: Text Hangman. </p>
+	 * 
+	 * <p> Description: A Scanner demonstration application and baseline</p>
+	 * 
+	 * @author Sumit SIngh
+	 * 
+	 * @version 1.0	    2018-01-30    
+	 * 
+	 */
+    
+	private static String usersName;
+	private static String inputFromUser;
+	private static char menuCharacter;
+
+	public static void main(String args[]) {
+		/* Initialize the Text Hangman game */
+		Scanner keyboard = new Scanner(System.in);
+		
+		/* Welcome the user and request the user to enter a name */
+        System.out.println("Welcome!"+"\n");
+        System.out.println("Please enter your name followed by a return ");
+		usersName = keyboard.nextLine();
+				        
+		while (true) {
+			/* Display menu */
+        System.out.print(usersName +", please enter a command letter followed by a return! \n");
+        System.out.println("   p -> Play the game");
+        System.out.println("   s -> View statistics");
+        System.out.println("   q -> Quit");
+        
+        /* Read the menu character */
+        menuCharacter = keyboard.next().charAt(0);
+			
+        /* Play the game? */
+        if(menuCharacter == 'p') {
+        	
+        System.out.println("Play the game command recognized.");
+        	
+        }
+			
+        /* View the statistics? */
+        else if(menuCharacter == 's') {
+        	
+        System.out.println("View the statistics command recognized.");
+                     }
+			
+        /* Quit the game? */
+        else if(menuCharacter == 'q') {
+        	
+        	System.out.println("Quit the game command recognized");
+        	System.out.println("Thanks for playing, " + usersName + "!");
+        	break;
+            
+        	 }
+			
+        /* Display error (if command is none of the above) */
+	    else 
+	    {	    	
+	    	System.out.println("*** Error ***");
+	    	System.out.println("   Invalid menu item entered. It must be p, s, or q!");
+	    	System.out.println("   The input found was: " + menuCharacter);
+	    	} 
+		}
+	keyboard.close();}
+}
