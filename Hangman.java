@@ -217,9 +217,7 @@ while (true) {
  	inputFromUser = keyboard.next().charAt(0);
  	
  	ind = theFakeResult.indexOf(inputFromUser);
- 	
- 	System.out.println(ind);
- 	
+ 	 	 	
  	if(ind !=-1) {
  	 	
  	    theResult.replace(theResult.charAt(ind), inputFromUser);
