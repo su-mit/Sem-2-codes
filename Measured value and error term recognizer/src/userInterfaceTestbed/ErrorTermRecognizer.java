@@ -409,18 +409,11 @@ public class ErrorTermRecognizer {
 			return errorTermErrorMessage + displayInput(input, currentCharNdx);
 		
 		case 8:
-			// States 2 and 4 are the same.  They are both final states with only one possible
-			// transition forward, if the next character is an E or an e.
-			if (currentCharNdx<input.length()) {
-			     errorTermErrorMessage = "This character can only be \".\" \n";
-				return errorTermErrorMessage + displayInput(input, currentCharNdx);
-				}
-				// If there is no more input, the input was recognized.
-				else {
-						errorTermIndexofError = -1;
-						errorTermErrorMessage = "";
-						return errorTermErrorMessage;
-					}
+                        // States 8 is not a final states with only one possible
+			  errorTermErrorMessage = "This character can only be \".\" \n";
+			  return errorTermErrorMessage + displayInput(input, currentCharNdx);
+				
+		
 					
 		
 		default:
