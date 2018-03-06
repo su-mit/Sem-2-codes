@@ -118,9 +118,11 @@ public class errorTerm {
 	    else
 	    	System.out.println("Wrong input");
 	   
+	    System.out.println("\n");
+	    
 	    //Displaying the inputs
-        System.out.println("Operand1 = " + operand1 + "\t" + "Error Term = " + operand1ErrorTerm);
-        System.out.println("Operand1 = " + operand1 + "\t" + "Error Term = " + operand1ErrorTerm);
+        System.out.println("Operand 1 = " + operand1+ "  " + "\u00B1" + "  " +operand1ErrorTerm);
+        System.out.println("Operand 2 = " + operand2+ "  " + "\u00B1" + "  "  + operand2ErrorTerm);
         
 	    // converting the resultant error term to String
 		String text = Double.toString(Math.abs(resultErrorTerm));
@@ -142,14 +144,17 @@ public class errorTerm {
  * After knowing the place of the first significant digit, displaying result up to that index
  * by using the substring method of the String class.
  * 
- */	    	
+ */	    	System.out.println("\n");
 	        System.out.println("Result =" + result + " " + "\u00B1" + " " +  text.substring(0, x));
 	    	
 	    }
 	   
 		// If no decimal point is there then nothing is needed to round off, result is displayed as it is
-	    else
-	    	System.out.println("Result =" + result + " " + "\u00B1" + " " +  Math.abs(resultErrorTerm));
+	    else {
+	    	System.out.println("\n");
+	    
+	    	System.out.println("Result =" + result + " " + "\u00B1" + " " +  Math.abs(resultErrorTerm)); 
+	    	}
 	       
 	   
 	    System.out.println("\n \n");
