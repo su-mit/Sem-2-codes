@@ -20,14 +20,10 @@ public class nameSearching {
 	public static int search(String d[], String g) {
 		
 		int ndx = 0;
-		for(ndx =0;	ndx < d.length; ndx++) {
-		while (d[ndx].equalsIgnoreCase(g)) {  // Here we ignore the case of the word
-
-			return ndx;                       // If the name is found then return the index where it was found
-		}
-	}
-		
-		return -1;                            // If name is not found the return -1
+		while (ndx < d.length && !(g.equalsIgnoreCase(d[ndx]))) ndx++;
+		if (ndx >= d.length) return -1;
+		if (g.equalsIgnoreCase(d[ndx])) return ndx;         // If name is found then return the index
+		else return -1;                                     // If name is not found the return -1
 	}
 	
 	
