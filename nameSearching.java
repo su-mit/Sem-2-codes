@@ -10,7 +10,7 @@ public class nameSearching {
 	
 	/*************
 	 * This method takes the String and the name to be serach and use the itrative method to search the name
-	 * in teh data. If the name is found in the data then it returns the index of the name index in the data
+	 * in the data. If the name is found in the data then it returns the index of the name index in the data
 	 * if isn't found then it returns -1.
 	 * 
 	 * @param d
@@ -32,7 +32,7 @@ public class nameSearching {
 		
 		Scanner temp = new Scanner(System.in);
 		
-		nameToFind = temp.next();                // Take input of the name to be sea
+		nameToFind = temp.next();                // Take input of the name to be search
 		
 		int index = search(data, nameToFind);
 		
